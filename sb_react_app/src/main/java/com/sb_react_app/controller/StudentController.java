@@ -46,13 +46,13 @@ public class StudentController {
         return studentService.getStudentById(studentId);
     }
 
-    @PutMapping("/update/id")
+    @PutMapping("/update/{id}")
     public Student updateStudent(@RequestBody Student student, @PathVariable Long studentId) {
 
         return studentService.updateStudentById(student, studentId); 
     }
 
-    @DeleteMapping("/delete/id")
+    @DeleteMapping("/delete/{id}")
     public void deleteStudentById(@PathVariable Long studentId) {
         studentService.deleteStudentById(studentId);
     }
