@@ -67,6 +67,8 @@ public class StudentServiceImpl implements StudentService {
         if( !studentRepository.existsById(studentId) ){
             throw new StudentNotFoundException("Student with id : " + studentId + " not found");
         }
+
+        studentRepository.deleteById(studentId);        
         
     }
 
